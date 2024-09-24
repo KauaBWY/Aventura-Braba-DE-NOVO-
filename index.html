@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <title>Quiz do Bald</title>
+</head>
+<body>
+    <main>
+        <!-- Passo inicial -->
+        <div class="passo ativo" id="passo-0">
+            <img src="Cenario-passo1.png" alt="Bald te dando as boas-vindas">
+            <p>Bem-vindo ao quiz do Bald! Vamos ver se você consegue resolver esses problemas. Pronto?</p>
+            <button class="btn-proximo" data-proximo="1">Começar!</button>
+        </div>
+
+        <!-- Primeira pergunta -->
+        <div class="passo" id="passo-1">
+            <img src="Cenario-passo4.png" alt="Primeira pergunta do quiz">
+            <p>Pergunta 1: Quanto é 2 + 2?</p>
+            <button class="btn-proximo" data-proximo="erro" data-correto="false">3</button>
+            <button class="btn-proximo" data-proximo="2" data-correto="true">4</button>
+            <button class="btn-proximo" data-proximo="erro" data-correto="false">5</button>
+        </div>
+
+        <!-- Segunda pergunta -->
+        <div class="passo" id="passo-2">
+            <img src="Cenario-passo4.png" alt="Primeira pergunta do quiz">
+            <p>Pergunta 2: Qual o resultado de 5 x 3?</p>
+            <button class="btn-proximo" data-proximo="3" data-correto="true">15</button>
+            <button class="btn-proximo" data-proximo="erro" data-correto="false">10</button>
+            <button class="btn-proximo" data-proximo="erro" data-correto="false">20</button>
+        </div>
+
+        <!-- Terceira pergunta -->
+        <div class="passo" id="passo-3">
+            <img src="Cenario-passo4.png" alt="Primeira pergunta do quiz">
+            <p>Pergunta 3: Qual é a raiz quadrada de 49?</p>
+            <button class="btn-proximo" data-proximo="4" data-correto="true">7</button>
+            <button class="btn-proximo" data-proximo="erro" data-correto="false">9</button>
+            <button class="btn-proximo" data-proximo="erro" data-correto="false">6</button>
+        </div>
+
+        <!-- Tela de parabéns -->
+        <div class="passo" id="passo-4">
+            <img src="Cenario-passo3.png" alt="Primeira pergunta do quiz">
+            <p>Parabéns! Você completou o quiz do Bald. Será que você acertou tudo?</p>
+            <button class="btn-proximo" data-proximo="0">Jogar Novamente</button>
+        </div>
+
+        <!-- Tela de erro -->
+        <div class="passo" id="erro">
+            <img src="Cenario-passo2.png" alt="Você errou">
+            <p>Você errou! Tente novamente.</p>
+            <button class="btn-proximo" data-proximo="0">Tentar de novo</button>
+        </div>
+
+        <!-- Tela de derrota -->
+        <div class="passo" id="derrota">
+            <img src="Cenario-passo3.png" alt="Você errou">
+            <p>Você errou 3 vezes. Game over! Vá para a sala especial.</p>
+            <button class="btn-proximo" data-proximo="sala-especial">Ir para a sala especial</button>
+        </div>
+
+        <!-- Sala especial -->
+        <div class="passo" id="sala-especial">
+            <img src="Cenario-passo3.png" alt="Você errou">
+            <p>Você está na sala especial do Bald. Tente de novo outra vez!</p>
+            <button class="btn-proximo" data-proximo="0">Tentar de novo</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
